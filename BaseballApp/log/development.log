@@ -40,3 +40,139 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 4
 NameError (uninitialized constant BaseballAppController::Player):
   
 app/controllers/baseball_app_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2023-12-08 17:16:45 -0500
+Processing by BaseballAppController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 465)
+
+
+  
+NameError (uninitialized constant BaseballAppController::Player):
+  
+app/controllers/baseball_app_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2023-12-08 17:17:07 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 218.2ms | Allocations: 100221)
+Completed 200 OK in 288ms (Views: 223.1ms | ActiveRecord: 1.8ms | Allocations: 112468)
+
+
+Started GET "/" for ::1 at 2023-12-09 17:40:59 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (7.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 57.5ms | Allocations: 4002)
+  Rendered layout layouts/application.html.erb (Duration: 120.2ms | Allocations: 17260)
+Completed 200 OK in 167ms (Views: 129.8ms | ActiveRecord: 12.2ms | Allocations: 20004)
+
+
+Started GET "/" for ::1 at 2023-12-09 17:41:28 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1246)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 14446)
+Completed 200 OK in 47ms (Views: 30.3ms | ActiveRecord: 2.5ms | Allocations: 17532)
+
+
+Started POST "/" for ::1 at 2023-12-09 17:41:44 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Sophia Rutman", "obpInput"=>".46", "avgInput"=>"50", "slgInput"=>"400", "commit"=>"Enter Player Information"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 795)
+
+
+  
+NameError (undefined local variable or method `player_models' for #<BaseballAppController:0x00000000014c80>):
+  
+app/controllers/baseball_app_controller.rb:17:in `enterPlayer'
+Started GET "/" for ::1 at 2023-12-09 17:43:07 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1259)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 14525)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 2.0ms | Allocations: 17596)
+
+
+Started POST "/" for ::1 at 2023-12-09 17:43:20 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"sdlkfj", "obpInput"=>".46", "avgInput"=>"70", "slgInput"=>"100", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:19:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.5ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "sdlkfj"], ["obp", 0.46], ["avg", 70.0], ["slg", 100.0], ["ops", nil], ["created_at", "2023-12-09 22:43:20.102576"], ["updated_at", "2023-12-09 22:43:20.102576"]]
+  ↳ app/controllers/baseball_app_controller.rb:19:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:19:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 35ms (ActiveRecord: 2.5ms | Allocations: 15195)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-09 17:43:20 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 508)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2430)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 3555)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-09 17:47:25 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1291)
+  Rendered layout layouts/application.html.erb (Duration: 51.7ms | Allocations: 14559)
+Completed 200 OK in 69ms (Views: 52.7ms | ActiveRecord: 3.8ms | Allocations: 20709)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-09 17:47:29 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2412)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 3455)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-09 17:47:38 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:5:in `index'
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `sort'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 14399)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 2.1ms | Allocations: 20526)
+
+

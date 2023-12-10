@@ -1,2 +1,33 @@
-<h1>BaseballApp#index</h1>
-<p>Find me in app/views/baseball_app/index.html.erb</p>
+<h1>Welcome to The Rutman-Novitski Organization!</h1>
+<h2>Please help us decide our batter lineup!</h2>
+<%= form_tag do%>
+    <p> Player Name: <%= text_field_tag(:nameInput) %> </p>
+    <p> Player On Base Percentage: <%= text_field_tag(:obpInput) %> </p>
+    <p> Player Batting Average: <%= text_field_tag(:avgInput) %> </p>
+    <p> Player Slug:  <%= text_field_tag(:slgInput) %> </p>
+    <p> Player OPS:  <%= text_field_tag(:avgInput) %> </p>
+    <p> <%= submit_tag "Enter Player Information" %> </p>
+<% end %>
+<table>
+    <thead>
+        <tr>
+            <th> Player <th>
+            <th> On Base Percentage <th>
+            <th> Batting Average <th>
+            <th> Slug <th>
+            <th> OPS <th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @allPlayers.each do |player|%>
+            <tr>
+                <td> <%= player.name %> </td>
+                <td> <%= player.obp %> </td>
+                <td> <%= player.avg %> </td>
+                <td> <%= player.slg %> </td>
+                <td> <%= player.ops %> </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

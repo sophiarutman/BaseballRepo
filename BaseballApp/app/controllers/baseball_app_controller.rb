@@ -1,7 +1,7 @@
 class BaseballAppController < ApplicationController
   def index
     puts "--------------------- In Index -------------------------"
-    @allPlayers = Player.all
+    @allPlayers = PlayerModel.all
     puts "# of players = #{@allPlayers.size}"
     @allPlayers = @allPlayers.sort
   end
@@ -14,7 +14,7 @@ class BaseballAppController < ApplicationController
     slg = params[:slgInput]
     ops = params[:opsInput]
     map = {"name" => name, "obp" => obp, "avg" => avg,"slg" => slg,"ops" => ops}
-    newRow = player_models.new(map)
+    newRow = PlayerModel.new(map)
     respond_to do |format|
       if newRow.save
         puts "Success!"
