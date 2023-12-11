@@ -1,9 +1,21 @@
 class BaseballAppController < ApplicationController
+  include BaseballAppHelper
+
   def index
     puts "--------------------- In Index -------------------------"
     @allPlayers = PlayerModel.all
     puts "# of players = #{@allPlayers.size}"
     @allPlayers = @allPlayers.sort
+    
+    # Make lineup start out empty
+    @lineup = nil
+
+     # Check if there are at least 9 players for lineup generation once button is pressed
+    if params[:commit] == "Generate Lineup"
+      if @allPlayers.count >= 9
+        @lineup = optimized_lineup(@players)
+      end
+    end
   end
 
   def enterPlayer

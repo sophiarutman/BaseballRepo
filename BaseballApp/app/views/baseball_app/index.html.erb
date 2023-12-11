@@ -5,7 +5,10 @@
     <p> Player On Base Percentage: <%= text_field_tag(:obpInput) %> </p>
     <p> Player Batting Average: <%= text_field_tag(:avgInput) %> </p>
     <p> Player Slug:  <%= text_field_tag(:slgInput) %> </p>
-    <p> Player OPS:  <%= text_field_tag(:avgInput) %> </p>
+    <p> Player OPS:  <%= text_field_tag(:opsInput) %> </p>
+    <% if @allPlayers.count >= 9 %>
+        <p> <%= button_to "Generate Lineup", baseball_app_generate_lineup_url, method: :post %> </p>
+    <% end %>
     <p> <%= submit_tag "Enter Player Information" %> </p>
 <% end %>
 <table>
@@ -31,3 +34,10 @@
         <% end %>
     </tbody>
 </table>
+
+<% if @lineup %>
+  <h1>Optimized Lineup:</h1>
+  <% @lineup.each do |position, player| %>
+    <p> #{position.capitalize}: #{player.name} </p>
+  <% end %>
+<% end %>
