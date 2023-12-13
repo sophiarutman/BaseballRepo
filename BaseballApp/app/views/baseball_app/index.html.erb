@@ -1,6 +1,43 @@
 <h1>Welcome to The Rutman-Novitski Organization!</h1>
 <h2>Please help us decide our batter lineup!</h2>
+
+<%= form_tag(baseball_app_url, method: :get) do %>
+    <p> Search Player By Name: <%= text_field_tag(:searchInput) %> </p>
+    <p> <%= submit_tag "Search Player by Name" %> </p>
+    <p> <%= button_to "Clear Search", baseball_app_clear_search_url, method: :get %></p>
+
+    <h3>Search Results:</h3>
+    <table style="border-collapse: collapse; width: 100%;">
+        <thead>
+        <thead>
+            <tr>
+                <th style="border: 2px solid black;">Player</th>
+                <th style="border: 2px solid black;">OBP</th>
+                <th style="border: 2px solid black;">BA</th>
+                <th style="border: 2px solid black;">SLG</th>
+                <th style="border: 2px solid black;">OPS</th>
+            </tr>
+        </thead>
+        </thead>
+        <% if params[:searchInput].present?%>
+            <tbody>
+                <% @searchedRows.each do |player| %>
+                    <tr>
+                        <td style="border: 1px solid black;"> <%= player.name %> </td>
+                        <td style="border: 1px solid black;"> <%= player.obp %> </td>
+                        <td style="border: 1px solid black;"> <%= player.avg %> </td>
+                        <td style="border: 1px solid black;"> <%= player.slg %> </td>
+                        <td style="border: 1px solid black;"> <%= player.ops %> </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        <% end %>
+    </table>
+<% end %>
+
+
 <%= form_tag do%>
+    <h3>All Players:</h3>
     <p> Player Name: <%= text_field_tag(:nameInput) %> </p>
     <p> Player On Base Percentage: <%= text_field_tag(:obpInput) %> </p>
     <p> Player Batting Average: <%= text_field_tag(:avgInput) %> </p>
@@ -40,36 +77,6 @@
 
 
 </table>
-
-<%= form_tag(baseball_app_url, method: :get) do %>
-    <p> Search Player By Name: <%= text_field_tag(:searchInput) %> </p>
-    <table style="border-collapse: collapse; width: 100%;">
-    <thead>
-       <thead>
-        <tr>
-            <th style="border: 2px solid black;">Player</th>
-            <th style="border: 2px solid black;">OBP</th>
-            <th style="border: 2px solid black;">BA</th>
-            <th style="border: 2px solid black;">SLG</th>
-            <th style="border: 2px solid black;">OPS</th>
-        </tr>
-    </thead>
-    </thead>
-
-    <tbody>
-        <% @searchedRows.each do |player| %>
-            <tr>
-                <td style="border: 1px solid black;"> <%= player.name %> </td>
-                <td style="border: 1px solid black;"> <%= player.obp %> </td>
-                <td style="border: 1px solid black;"> <%= player.avg %> </td>
-                <td style="border: 1px solid black;"> <%= player.slg %> </td>
-                <td style="border: 1px solid black;"> <%= player.ops %> </td>
-            </tr>
-        <% end %>
-    </tbody>
-    <p> <%= submit_tag "Search Player by Name" %> </p>
-    <h3>Search Results:</h3>
-<% end %>
 
 
 <% if @lineup %>

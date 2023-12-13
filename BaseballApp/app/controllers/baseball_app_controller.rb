@@ -20,7 +20,7 @@ class BaseballAppController < ApplicationController
     if params[:searchInput].present?
       @searchedRows = PlayerModel.where('name LIKE ?', "%#{params[:searchInput]}%")
     else
-      @searchedRows = @allPlayers
+      @searchedRows = nil
     end
   end
 
@@ -52,5 +52,10 @@ class BaseballAppController < ApplicationController
     else
       puts "PlayerNotFound"
     end
+  end
+
+  def clearSearch
+    param[:searchInput] = nil
+    redirect_to baseball_app_url
   end
 end
