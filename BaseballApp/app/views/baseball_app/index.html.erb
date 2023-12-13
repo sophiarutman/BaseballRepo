@@ -11,26 +11,29 @@
     <% end %>
     <p> <%= submit_tag "Enter Player Information" %> </p>
 <% end %>
-<table>
+<table style="border-collapse: collapse; width: 100%;">
     <thead>
+       <thead>
         <tr>
-            <th> Player <th>
-            <th> On Base Percentage <th>
-            <th> Batting Average <th>
-            <th> Slug <th>
-            <th> OPS <th>
+            <th style="border: 2px solid black;">Player</th>
+            <th style="border: 2px solid black;">OBP</th>
+            <th style="border: 2px solid black;">BA</th>
+            <th style="border: 2px solid black;">SLG</th>
+            <th style="border: 2px solid black;">OPS</th>
+            <th style="border: 2px solid black;">Action</th>
         </tr>
+    </thead>
     </thead>
 
     <tbody>
-        <% @allPlayers.each do |player|%>
+        <% @allPlayers.each do |player| %>
             <tr>
-                <td> <%= player.name %> </td>
-                <td> <%= player.obp %> </td>
-                <td> <%= player.avg %> </td>
-                <td> <%= player.slg %> </td>
-                <td> <%= player.ops %> </td>
-                <td> <%= button_to 'Delete', baseball_app_delete_player_url, method: :delete%> </td>
+                <td style="border: 1px solid black;"> <%= player.name %> </td>
+                <td style="border: 1px solid black;"> <%= player.obp %> </td>
+                <td style="border: 1px solid black;"> <%= player.avg %> </td>
+                <td style="border: 1px solid black;"> <%= player.slg %> </td>
+                <td style="border: 1px solid black;"> <%= player.ops %> </td>
+                <td style="border: 1px solid black;"> <%= button_to 'Delete', baseball_app_delete_player_url, method: :delete %> </td>
             </tr>
         <% end %>
     </tbody>
