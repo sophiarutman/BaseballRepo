@@ -20,7 +20,7 @@
             <th style="border: 2px solid black;">BA</th>
             <th style="border: 2px solid black;">SLG</th>
             <th style="border: 2px solid black;">OPS</th>
-            <th style="border: 2px solid black;">Action</th>
+            <th style="border: 2px solid black;">Delete Player?</th>
         </tr>
     </thead>
     </thead>
@@ -41,20 +41,35 @@
 
 </table>
 
-<p> Search: <%= text_field_tag(:searchInput) %> <%= button_to "Search For Player By Name", baseball_app_search_player_url, method: :get %></p>
-<% if params[:searchInput].present?%>
-     <h1>Search Results:</h1>
-     <%@searchedRow.each do |player|%>
+<%= form_tag(baseball_app_url, method: :get) do %>
+    <p> Search Player By Name: <%= text_field_tag(:searchInput) %> </p>
+    <table style="border-collapse: collapse; width: 100%;">
+    <thead>
+       <thead>
         <tr>
-            <td> <%= player.name %> </td>
-            <td> <%= player.obp %> </td>
-            <td> <%= player.avg %> </td>
-            <td> <%= player.slg %> </td>
-            <td> <%= player.ops %> </td>
+            <th style="border: 2px solid black;">Player</th>
+            <th style="border: 2px solid black;">OBP</th>
+            <th style="border: 2px solid black;">BA</th>
+            <th style="border: 2px solid black;">SLG</th>
+            <th style="border: 2px solid black;">OPS</th>
         </tr>
-    <% end %>
-<% end %>
+    </thead>
+    </thead>
 
+    <tbody>
+        <% @searchedRows.each do |player| %>
+            <tr>
+                <td style="border: 1px solid black;"> <%= player.name %> </td>
+                <td style="border: 1px solid black;"> <%= player.obp %> </td>
+                <td style="border: 1px solid black;"> <%= player.avg %> </td>
+                <td style="border: 1px solid black;"> <%= player.slg %> </td>
+                <td style="border: 1px solid black;"> <%= player.ops %> </td>
+            </tr>
+        <% end %>
+    </tbody>
+    <p> <%= submit_tag "Search Player by Name" %> </p>
+    <h3>Search Results:</h3>
+<% end %>
 
 
 <% if @lineup %>

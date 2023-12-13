@@ -18,7 +18,9 @@ class BaseballAppController < ApplicationController
     end
 
     if params[:searchInput].present?
-      puts @searchedRow
+      @searchedRows = PlayerModel.where('name LIKE ?', "%#{params[:searchInput]}%")
+    else
+      @searchedRows = @allPlayers
     end
   end
 
@@ -46,17 +48,6 @@ class BaseballAppController < ApplicationController
     deletedRow = PlayerModel.find_by(params[:nameInput])
     if deletedRow.destroy
       puts "Success!"
-      redirect_to baseball_app_url
-    else
-      puts "PlayerNotFound"
-    end
-  end
-
-  def searchPlayer
-    puts "--------------------------In Search Player -----------------------------"
-    @searchedRows = PlayerModel.where('name LIKE ?', "#{params[:searchInput]}")
-    if @searchedRows
-      puts "Success"
       redirect_to baseball_app_url
     else
       puts "PlayerNotFound"
