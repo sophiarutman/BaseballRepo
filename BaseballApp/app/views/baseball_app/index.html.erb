@@ -30,10 +30,29 @@
                 <td> <%= player.avg %> </td>
                 <td> <%= player.slg %> </td>
                 <td> <%= player.ops %> </td>
+                <td> <%= button_to 'Delete', baseball_app_delete_player_url, method: :delete%> </td>
             </tr>
         <% end %>
     </tbody>
+
+
 </table>
+
+<p> Search: <%= text_field_tag(:searchInput) %> <%= button_to "Search For Player By Name", baseball_app_search_player_url, method: :get %></p>
+<% if params[:searchInput].present?%>
+     <h1>Search Results:</h1>
+     <%@searchedRow.each do |player|%>
+        <tr>
+            <td> <%= player.name %> </td>
+            <td> <%= player.obp %> </td>
+            <td> <%= player.avg %> </td>
+            <td> <%= player.slg %> </td>
+            <td> <%= player.ops %> </td>
+        </tr>
+    <% end %>
+<% end %>
+
+
 
 <% if @lineup %>
   <h1>Optimized Lineup:</h1>
