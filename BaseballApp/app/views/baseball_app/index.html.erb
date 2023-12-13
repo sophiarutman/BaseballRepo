@@ -20,17 +20,21 @@
         </thead>
         </thead>
         <% if params[:searchInput].present?%>
-            <tbody>
-                <% @searchedRows.each do |player| %>
-                    <tr>
-                        <td style="border: 1px solid black;"> <%= player.name %> </td>
-                        <td style="border: 1px solid black;"> <%= player.obp %> </td>
-                        <td style="border: 1px solid black;"> <%= player.avg %> </td>
-                        <td style="border: 1px solid black;"> <%= player.slg %> </td>
-                        <td style="border: 1px solid black;"> <%= player.ops %> </td>
-                    </tr>
-                <% end %>
-            </tbody>
+            <%if @searchedRows.size == 0%>
+                    <p> There are no names matching this search. Please search a different name. </p>
+            <%else%>
+                <tbody>
+                    <% @searchedRows.each do |player| %>
+                        <tr>
+                            <td style="border: 1px solid black;"> <%= player.name %> </td>
+                            <td style="border: 1px solid black;"> <%= player.obp %> </td>
+                            <td style="border: 1px solid black;"> <%= player.avg %> </td>
+                            <td style="border: 1px solid black;"> <%= player.slg %> </td>
+                            <td style="border: 1px solid black;"> <%= player.ops %> </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            <% end %>
         <% end %>
     </table>
 <% end %>

@@ -37,8 +37,6 @@ class BaseballAppController < ApplicationController
       if newRow.save
         puts "Success!"
         format.html{redirect_to baseball_app_url}
-      #else
-        #format.html{redirect_to error_page_url}
       end
     end
   end
