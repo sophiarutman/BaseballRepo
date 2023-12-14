@@ -5,7 +5,14 @@ class BaseballAppController < ApplicationController
     puts "--------------------- In Index -------------------------"
     @allPlayers = PlayerModel.all
     puts "# of players = #{@allPlayers.size}"
-    @allPlayers = @allPlayers.sort
+
+    if params[:commit] == "Sort by Name"
+      @allPlayers.sort_by{ |player| player.name}
+    elsif params[:commit] == "Sort by OBP"
+      @allPlayers = PlayerModel.all.sort_by{ |player| player.obp}
+    else
+      @allPlayers = PlayerModel.all
+    end
 
     # Make lineup start out empty
     @lineup = nil
@@ -19,8 +26,29 @@ class BaseballAppController < ApplicationController
 
     if params[:searchInput].present?
       @searchedRows = PlayerModel.where('name LIKE ?', "%#{params[:searchInput]}%")
+      if @searchedRows.size == 0
+        puts "There are no Players with this name or string of characters in their name. "
+      end
     else
       @searchedRows = nil
+    end
+  end
+
+  def handlePost
+    if params[:commit] == "Enter Player Information"
+      self.enterPlayer
+    end
+    if params[:commit] == "Sort by Name"
+      self.index
+    end
+    if params[:commit] == "Sort by Name"
+      self.index
+    end
+    if params[:commit] == "Sort by Name"
+      self.index
+    end
+    if params[:commit] == "Sort by Name"
+      self.index
     end
   end
 
@@ -47,13 +75,31 @@ class BaseballAppController < ApplicationController
     if deletedRow.destroy
       puts "Success!"
       redirect_to baseball_app_url
-    else
-      puts "PlayerNotFound"
     end
   end
 
   def clearSearch
     param[:searchInput] = nil
     redirect_to baseball_app_url
+  end
+
+  def sortByName
+    @allNames = PlayerModel.all.sort
+  end
+
+  def sortByOBP
+    @allPlayers = PlayerModel.all.sort_by{ |player| [-player.obp, player.name, player.avg, player.slg, player.ops] }
+  end
+
+  def sortByAVG
+    @allPlayers.sort_by[player.avg]
+  end
+
+  def sortBySLG
+    @allPlayers.sort_by[player.slg]
+  end
+
+  def sortByOPS
+    @allPlayers.sort_by[player.ops]
   end
 end

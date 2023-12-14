@@ -52,6 +52,7 @@
     <% end %>
     <p> <%= submit_tag "Enter Player Information" %> </p>
 <% end %>
+
 <table style="border-collapse: collapse; width: 100%;">
     <thead>
        <thead>
@@ -67,13 +68,31 @@
     </thead>
 
     <tbody>
+        <td> <%= button_to "Sort By Name", baseball_app_url, method: :post%> </td>
+        <td> <%= button_to "Sort By OBP", baseball_app_sort_by_OBP_url, method: :get %> </td>
+        <td> <%= button_to "Sort By AVG", baseball_app_sort_by_AVG_url, method: :get %> </td>
+        <td> <%= button_to "Sort By SLG", baseball_app_sort_by_SLG_url, method: :get %> </td>
+        <td> <%= button_to "Sort By OPS", baseball_app_sort_by_OPS_url, method: :get %> </td>
+
         <% @allPlayers.each do |player| %>
             <tr>
                 <td style="border: 1px solid black;"> <%= player.name %> </td>
                 <td style="border: 1px solid black;"> <%= player.obp %> </td>
+                <% if player.obp > 1 or player.obp < 0 %>
+                    <p> Beware: <%= player.name%> OBP should be between 0 and 1 as a decimal! </p>
+                <% end %>
                 <td style="border: 1px solid black;"> <%= player.avg %> </td>
+                <% if player.avg > 1 or player.avg < 0 %>
+                    <p> Beware: <%=player.name%> AVG should be between 0 and 1 as a decimal! </p>
+                <% end %>
                 <td style="border: 1px solid black;"> <%= player.slg %> </td>
+                <% if player.slg > 1 or player.slg < 0 %>
+                    <p> Beware: <%=player.name%> SLG should be between 0 and 1 as a decimal! </p>
+                <% end %>
                 <td style="border: 1px solid black;"> <%= player.ops %> </td>
+                <% if player.ops > 2 or player.ops < 0 %>
+                    <p> Beware: <%=player.name%> OPS should be between 0 and 2! </p>
+                <% end %>
                 <td style="border: 1px solid black;"> <%= button_to 'Delete', baseball_app_delete_player_url, method: :delete %> </td>
             </tr>
         <% end %>
