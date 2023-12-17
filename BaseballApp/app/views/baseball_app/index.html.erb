@@ -1,58 +1,22 @@
 <h1>Welcome to The Rutman-Novitski Organization!</h1>
-<h2>Please help us decide our batter lineup!</h2>
-
-<%= form_tag(baseball_app_url, method: :get) do %>
-    <p> Search Player By Name: <%= text_field_tag(:searchInput) %> </p>
-    <p> <%= submit_tag "Search Player by Name" %> </p>
-    <p> <%= button_to "Clear Search", baseball_app_clear_search_url, method: :get %></p>
-
-    <h3>Search Results:</h3>
-    <table style="border-collapse: collapse; width: 100%;">
-        <thead>
-        <thead>
-            <tr>
-                <th style="border: 2px solid black;">Player</th>
-                <th style="border: 2px solid black;">OBP</th>
-                <th style="border: 2px solid black;">BA</th>
-                <th style="border: 2px solid black;">SLG</th>
-                <th style="border: 2px solid black;">OPS</th>
-            </tr>
-        </thead>
-        </thead>
-        <% if params[:searchInput].present?%>
-            <%if @searchedRows.size == 0%>
-                    <p> There are no names matching this search. Please search a different name. </p>
-            <%else%>
-                <tbody>
-                    <% @searchedRows.each do |player| %>
-                        <tr>
-                            <td style="border: 1px solid black;"> <%= player.name %> </td>
-                            <td style="border: 1px solid black;"> <%= player.obp %> </td>
-                            <td style="border: 1px solid black;"> <%= player.avg %> </td>
-                            <td style="border: 1px solid black;"> <%= player.slg %> </td>
-                            <td style="border: 1px solid black;"> <%= player.ops %> </td>
-                        </tr>
-                    <% end %>
-                </tbody>
-            <% end %>
-        <% end %>
-    </table>
-<% end %>
-
+<h3> Please enter in a player and their stats. Once you enter 9 or more players, we will be able to generate a batter's lineup.</h3>
 
 <%= form_tag do%>
-    <h3>All Players:</h3>
     <p> Player Name: <%= text_field_tag(:nameInput) %> </p>
     <p> Player On Base Percentage: <%= text_field_tag(:obpInput) %> </p>
     <p> Player Batting Average: <%= text_field_tag(:avgInput) %> </p>
     <p> Player Slug:  <%= text_field_tag(:slgInput) %> </p>
     <p> Player OPS:  <%= text_field_tag(:opsInput) %> </p>
-    <% if @allPlayers.count >= 9 %>
-        <p> <%= button_to "Generate Lineup", baseball_app_generate_lineup_url, method: :post %> </p>
-    <% end %>
+    
     <p> <%= submit_tag "Enter Player Information" %> </p>
 <% end %>
 
+<% if @allPlayers.count >= 9 %>
+        <h2>Please help us decide our batter lineup!</h2>
+        <p> <%= button_to "Generate Lineup", generate_lineup_url, method: :get %> </p>
+<% end %>
+
+<h3>All Players: <%= button_to "Delete a Player", baseball_app_redirect_to_delete_controller_url, method: :get%> <%= button_to "Search a Player", search_app_url, method: :get%> </h3>
 <table style="border-collapse: collapse; width: 100%;">
     <thead>
        <thead>
@@ -62,18 +26,17 @@
             <th style="border: 2px solid black;">BA</th>
             <th style="border: 2px solid black;">SLG</th>
             <th style="border: 2px solid black;">OPS</th>
-            <th style="border: 2px solid black;">Delete Player?</th>
         </tr>
     </thead>
     </thead>
 
     <tbody>
-        <td> <%= button_to "Sort By Name", baseball_app_url, method: :post%> </td>
-        <td> <%= button_to "Sort By OBP", baseball_app_sort_by_OBP_url, method: :get %> </td>
-        <td> <%= button_to "Sort By AVG", baseball_app_sort_by_AVG_url, method: :get %> </td>
-        <td> <%= button_to "Sort By SLG", baseball_app_sort_by_SLG_url, method: :get %> </td>
-        <td> <%= button_to "Sort By OPS", baseball_app_sort_by_OPS_url, method: :get %> </td>
-
+        <td> <%= button_to "Sort By Name", sort_by_name_url, method: :get%>
+        <td> <%= button_to "Sort By OBP", sort_by_obp_url, method: :get%> </td>
+        <td> <%= button_to "Sort By AVG", sort_by_avg_url, method: :get%> </td>
+        <td> <%= button_to "Sort By SLG", sort_by_slg_url, method: :get%> </td>
+        <td> <%= button_to "Sort by OPS", sort_by_ops_url, method: :get%> </td>
+        
         <% @allPlayers.each do |player| %>
             <tr>
                 <td style="border: 1px solid black;"> <%= player.name %> </td>
@@ -93,18 +56,9 @@
                 <% if player.ops > 2 or player.ops < 0 %>
                     <p> Beware: <%=player.name%> OPS should be between 0 and 2! </p>
                 <% end %>
-                <td style="border: 1px solid black;"> <%= button_to 'Delete', baseball_app_delete_player_url, method: :delete %> </td>
             </tr>
         <% end %>
     </tbody>
-
-
 </table>
 
 
-<% if @lineup %>
-  <h1>Optimized Lineup:</h1>
-  <% @lineup.each do |position, player| %>
-    <p> #{position.capitalize}: #{player.name} </p>
-  <% end %>
-<% end %>

@@ -1,0 +1,6 @@
+<% if @lineup %>
+  <h1>Optimized Lineup:</h1>
+  <% @lineup.each do |position, player| %>
+    <p> #{position.capitalize}: #{player.name} </p>
+  <% end %>
+<% end %>

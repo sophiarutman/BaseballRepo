@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
   Rails.application.routes.draw do
+  get 'sort_by_slg' => "sort_by_slg#sortSLG"
+  get 'sort_by_ops' => "sort_by_ops#sortOPS"
+  get 'sort_by_avg'  => "sort_by_avg#sortAVG"
+  get 'sort_by_obp' => "sort_by_obp#sortOBP"
     root "baseball_app#index"
+    get 'sort_by_name' => "sort_by_name#sort"
+    get "search_app" => 'search_app#index'
+    get "search_app/clear_search" => 'search_app#clearSearch'
     get "baseball_app" => "baseball_app#index"
-    get "/" => "baseball_app#index"
-    get "baseball_app/clear_search" => "baseball_app#clearSearch"
-    post "baseball_app/sort_by_name" => "baseball_app#sortByName"
-    post "baseball_app/sort_by_OBP" => "baseball_app#sortByOBP"
-    post "baseball_app/sort_by_AVG" => "baseball_app#sortByAVG"
-    post "baseball_app/sort_by_SLG" => "baseball_app#sortBySLG"
-    post "baseball_app/sort_by_OPS" => "baseball_app#sortByOPS"
+    get "baseball_app/redirect_to_delete_controller" => "baseball_app#redirectToDeleteController"
+    get "delete_app" => "delete_app#index"
+    get "generate_lineup" => "generate_lineup#index"
+    get "generate_lineup/generate_batter_lineup" => "generate_lineup#generateBatterLineup"
     post "/" => "baseball_app#enterPlayer"
-    post "baseball_app/generate_lineup" => "baseball_app#index"
-    delete "baseball_app/delete_player" => "baseball_app#deletePlayer"
+    delete "delete_app"=>"delete_app#index"
   end
 end

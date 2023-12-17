@@ -1,0 +1,39 @@
+<%= form_tag(search_app_url, method: :get) do %>
+    <p> Search Player By Name: <%= text_field_tag(:searchInput) %> </p>
+    <p> <%= submit_tag "Search Player by Name" %> </p>
+    <p> <%= button_to "Clear Search", search_app_clear_search_url, method: :get %></p>
+
+    <h3>Search Results:</h3>
+    <table style="border-collapse: collapse; width: 100%;">
+        <thead>
+        <thead>
+            <tr>
+                <th style="border: 2px solid black;">Player</th>
+                <th style="border: 2px solid black;">OBP</th>
+                <th style="border: 2px solid black;">BA</th>
+                <th style="border: 2px solid black;">SLG</th>
+                <th style="border: 2px solid black;">OPS</th>
+            </tr>
+        </thead>
+        </thead>
+        <% if params[:searchInput].present?%>
+            <%if @searchedRows.size == 0%>
+                    <p> There are no names matching this search. Please search a different name. </p>
+            <%else%>
+                <tbody>
+                    <% @searchedRows.each do |player| %>
+                        <tr>
+                            <td style="border: 1px solid black;"> <%= player.name %> </td>
+                            <td style="border: 1px solid black;"> <%= player.obp %> </td>
+                            <td style="border: 1px solid black;"> <%= player.avg %> </td>
+                            <td style="border: 1px solid black;"> <%= player.slg %> </td>
+                            <td style="border: 1px solid black;"> <%= player.ops %> </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            <% end %>
+        <% end %>
+    </table>
+    <%= link_to "Go to homepage", baseball_app_url%>
+<% end %>
+

@@ -1,0 +1,15 @@
+<h1> Generate your batters lineup here! </h1>
+<h2> First, some details on how the lineup is decided...,</h2>
+
+<h3> This is how we decide, in the order that we decide. We will chose the second batter first, the third batter second, etc.<h3>
+
+<p> 2nd batter: highest added AVG and OBP </p>
+<p> 3rd batter: highest AVG </p>
+<p> 1st batter: highest OBP </p>
+<p> 5th batter: highest OPS out of the remaining Players </p>
+<p>6-9th: best averages of remaining players, in decreasing order. 6th will have the highest average of all remaining players, 7th will have the second highest, etc. <p>
+
+Now, generate your lineup!
+
+<p> <%= button_to "Generate Batter's Lineup", generate_lineup_generate_batter_lineup_url, method: :get %> </p>
+

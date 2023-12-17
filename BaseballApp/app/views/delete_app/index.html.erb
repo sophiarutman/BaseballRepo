@@ -1,0 +1,15 @@
+<h1> Please enter a player you want to delete from the organization </h1>
+
+<%= form_tag(delete_app_url, method: :delete) do %>
+    <p> Delete Player By Name: <%= text_field_tag(:deleteInput) %> </p>
+    <p> <%= submit_tag "Delete Player by Name" %> </p>
+    <%= params[:deleteInput]%>
+<% end %>
+
+<p> If player is successfully deleted, you will be autmatically redirected to the homepage. </p>
+<p> If not, you will remain on this page. <p>
+
+
+<%= link_to "Go to homepage", baseball_app_url%>
+
+
