@@ -903,3 +903,1864 @@ Processing by BaseballAppController#index as HTML
 Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 2.1ms | Allocations: 21477)
 
 
+Started GET "/" for ::1 at 2023-12-17 11:09:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.5ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 82.5ms | Allocations: 16387)
+  Rendered layout layouts/application.html.erb (Duration: 188.4ms | Allocations: 51206)
+Completed 200 OK in 450ms (Views: 222.6ms | ActiveRecord: 7.0ms | Allocations: 63016)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 11:10:46 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 221)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 11:10:46 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 719)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2641)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3106)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 11:10:50 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1763)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3687)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 4341)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 11:37:56 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 11:37:56 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 475)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2414)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 2667)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 11:37:58 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1790)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3714)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 5.4ms | Allocations: 4607)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 11:37:59 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 11:38:00 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 478)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2398)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 2649)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 11:38:01 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3685)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 4336)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 12:23:47 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2412)
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 2870)
+
+
+Started GET "/generate_lineup/generate_batter_lineup" for ::1 at 2023-12-17 12:24:07 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (7.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:32:in `optimized_lineup'
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models" WHERE (obp > 0.9) AND 1=1[0m
+  ↳ app/helpers/generate_lineup_helper.rb:5:in `highest_obp?'
+  [1m[36mCACHE PlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:33:in `optimized_lineup'
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models" WHERE (avg > 0.9) AND 1=1[0m
+  ↳ app/helpers/generate_lineup_helper.rb:18:in `highest_avg?'
+  [1m[36mCACHE PlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:34:in `optimized_lineup'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 8.6ms | Allocations: 3577)
+
+
+  
+NoMethodError (undefined method `player_model_id' for [:number_three, #<PlayerModel id: 91, name: "Zac", obp: 0.9, avg: 0.9, slg: 0.9, ops: 0.9, created_at: "2023-12-16 22:58:51.928428000 +0000", updated_at: "2023-12-16 22:58:51.928428000 +0000">]:Array):
+  
+app/helpers/generate_lineup_helper.rb:12:in `each'
+app/helpers/generate_lineup_helper.rb:12:in `map'
+app/helpers/generate_lineup_helper.rb:12:in `highest_average_and_obp?'
+app/helpers/generate_lineup_helper.rb:34:in `block in optimized_lineup'
+app/helpers/generate_lineup_helper.rb:34:in `optimized_lineup'
+app/controllers/generate_lineup_controller.rb:7:in `generateBatterLineup'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:16:26 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 13983)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 14894)
+
+
+Started GET "/generate_lineup/generate_batter_lineup" for ::1 at 2023-12-17 13:16:28 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (3.6ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 42ms (ActiveRecord: 5.6ms | Allocations: 5454)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:16:28 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2294)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2537)
+
+
+Started GET "/generate_lineup/generate_batter_lineup" for ::1 at 2023-12-17 13:16:32 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.2ms | Allocations: 1110)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:16:32 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2270)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 2513)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:20:19 -0500
+  
+SyntaxError (/Users/rnovitsk/Development/PPL_CSCI2320/projects/BaseballRepo/BaseballApp/app/helpers/generate_lineup_helper.rb:33: syntax error, unexpected end-of-input, expecting `end' or dummy end
+  end
+     ^
+):
+  
+app/helpers/generate_lineup_helper.rb:33: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/generate_lineup_controller.rb:1:in `<main>'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:20:42 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 1112)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1204)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2097)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `generate_batter_lineup_url' for #<ActionView::Base:0x00000000017098>):
+    11: 
+    12: Now, generate your lineup!
+    13: 
+    14: <p> <%= button_to "Generate Batter's Lineup", generate_batter_lineup_url, method: :get %> </p>
+  
+app/views/generate_lineup/index.html.erb:14
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:21:04 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1128)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2019)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `generate_batter_generate_batter_lineup_url' for #<ActionView::Base:0x0000000001ae00>):
+    11: 
+    12: Now, generate your lineup!
+    13: 
+    14: <p> <%= button_to "Generate Batter's Lineup", generate_batter_generate_batter_lineup_url, method: :get %> </p>
+  
+app/views/generate_lineup/index.html.erb:14
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:25:23 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 13983)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 14892)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:25:25 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.7ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 4.7ms | Allocations: 5986)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:25:25 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2273)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2515)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:25:28 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.2ms | Allocations: 1141)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:25:28 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2282)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 2524)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:33:42 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 13983)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 14897)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:33:45 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (3.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 36ms (ActiveRecord: 4.8ms | Allocations: 5519)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:33:45 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 2291)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 2533)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:35:25 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 13964)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 14878)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:35:27 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 13ms (ActiveRecord: 4.0ms | Allocations: 6032)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:35:27 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 2258)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 2500)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:35:55 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 14032)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 14946)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 13:35:57 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6201)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 8129)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 3.7ms | Allocations: 10469)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:36:00 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 2270)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 2515)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:36:01 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 6ms (ActiveRecord: 0.2ms | Allocations: 1427)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:36:01 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2298)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2540)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:36:45 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 14013)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 14927)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:36:47 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 5.4ms | Allocations: 6032)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:36:47 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2289)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2531)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:51:22 -0500
+  
+NameError (undefined local variable or method `lineup_string' for GenerateLineupController:Class):
+  
+app/controllers/generate_lineup_controller.rb:12:in `<class:GenerateLineupController>'
+app/controllers/generate_lineup_controller.rb:1:in `<main>'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:51:30 -0500
+  
+NameError (undefined local variable or method `lineup_string' for GenerateLineupController:Class):
+  
+app/controllers/generate_lineup_controller.rb:12:in `<class:GenerateLineupController>'
+app/controllers/generate_lineup_controller.rb:1:in `<main>'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:51:40 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 14010)
+Completed 200 OK in 30ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 14926)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:51:41 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (1.4ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 80ms (ActiveRecord: 2.3ms | Allocations: 5511)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:51:42 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2265)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2507)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:52:40 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 254)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 14007)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 14916)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 13:52:42 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+Completed 406 Not Acceptable in 12ms (ActiveRecord: 3.7ms | Allocations: 6035)
+
+
+  
+ActionController::MissingExactTemplate (GenerateLineupController#generateBatterLineup is missing a template for request formats: text/html):
+  
+actionpack (7.1.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 13:52:42 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2277)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2519)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 13:52:46 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3070)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4997)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 5889)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:03:50 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 6093)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 19576)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 2.0ms | Allocations: 22034)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:03:52 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2423)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 2880)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:03:53 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.4ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1159)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1258)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 2218)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% if @lineup %>
+ <h2>Baseball Player Lineup</h2>
+<pre><%= @lineup_string %></pre>
+  <% end %>
+<% end %>
+):
+1:    <% if @lineup %>
+2:     <h2>Baseball Player Lineup</h2>
+3:    <pre><%= @lineup_string %></pre>
+4:      <% end %>
+5:    <% end %>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:7: syntax error, unexpected `end'
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:05:41 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 254)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 14029)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 14938)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:05:43 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 1.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2347)
+Completed 200 OK in 30ms (Views: 9.7ms | ActiveRecord: 5.6ms | Allocations: 7911)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:08:57 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1197)
+
+
+  
+NoMethodError (undefined method `sorty' for #<GenerateLineupController:0x0000000004a600>):
+  
+app/helpers/generate_lineup_helper.rb:4:in `optimized_lineup'
+app/controllers/generate_lineup_controller.rb:9:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:09:30 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1227)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1319)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.8ms | Allocations: 7443)
+
+
+  
+ActionView::Template::Error (undefined method `ops' for [:number_two, #<PlayerModel id: 93, name: "Man", obp: 0.9, avg: 0.9, slg: 0.9, ops: 0.9, created_at: "2023-12-16 23:13:28.644648000 +0000", updated_at: "2023-12-16 23:13:28.644648000 +0000">]:Array):
+    15:         
+    16:         <% @lineup.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= player.ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= player.name %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= player.obp %> </td>
+    21:                 <td style="border: 1px solid black;"> <%= player.avg %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:18
+app/views/generate_lineup/generate_batter_lineup.html.erb:16:in `each'
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:12:54 -0500
+  
+SyntaxError (/Users/rnovitsk/Development/PPL_CSCI2320/projects/BaseballRepo/BaseballApp/app/helpers/generate_lineup_helper.rb:2: formal argument cannot be an instance variable
+...  def optimized_lineup(@players)
+...                       ^~~~~~~~
+):
+  
+app/helpers/generate_lineup_helper.rb:2: formal argument cannot be an instance variable
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/generate_lineup_controller.rb:1:in `<main>'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:13:00 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1284)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1376)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.7ms | Allocations: 7511)
+
+
+  
+ActionView::Template::Error (undefined method `ops' for [:number_two, #<PlayerModel id: 93, name: "Man", obp: 0.9, avg: 0.9, slg: 0.9, ops: 0.9, created_at: "2023-12-16 23:13:28.644648000 +0000", updated_at: "2023-12-16 23:13:28.644648000 +0000">]:Array):
+    15:         
+    16:         <% @lineup.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= player.ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= player.name %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= player.obp %> </td>
+    21:                 <td style="border: 1px solid black;"> <%= player.avg %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:18
+app/views/generate_lineup/generate_batter_lineup.html.erb:16:in `each'
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:17:19 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1226)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1318)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.0ms | Allocations: 7441)
+
+
+  
+ActionView::Template::Error (undefined method `ops' for [1, #<PlayerModel id: 93, name: "Man", obp: 0.9, avg: 0.9, slg: 0.9, ops: 0.9, created_at: "2023-12-16 23:13:28.644648000 +0000", updated_at: "2023-12-16 23:13:28.644648000 +0000">]:Array):
+    15:         
+    16:         <% @lineup.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= player.ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= player.name %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= player.obp %> </td>
+    21:                 <td style="border: 1px solid black;"> <%= player.avg %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:18
+app/views/generate_lineup/generate_batter_lineup.html.erb:16:in `each'
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:18:05 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.3ms | Allocations: 1146)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1238)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.9ms | Allocations: 7361)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    15:         
+    16:         <% @lineup.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= player[:ops] %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= player.name %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= player.obp %> </td>
+    21:                 <td style="border: 1px solid black;"> <%= player.avg %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:18
+app/views/generate_lineup/generate_batter_lineup.html.erb:16:in `each'
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:19:55 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1148)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1240)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.2ms | Allocations: 7361)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `ops' for #<ActionView::Base:0x000000000629d0>):
+    15:         
+    16:         <% @lineup.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= @lineup[:number_one][ops] %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= player.name %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= player.obp %> </td>
+    21:                 <td style="border: 1px solid black;"> <%= player.avg %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:18
+app/views/generate_lineup/generate_batter_lineup.html.erb:16:in `each'
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:20:08 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1286)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1378)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.4ms | Allocations: 7499)
+
+
+  
+ActionView::Template::Error (undefined method `name' for [:number_two, #<PlayerModel id: 93, name: "Man", obp: 0.9, avg: 0.9, slg: 0.9, ops: 0.9, created_at: "2023-12-16 23:13:28.644648000 +0000", updated_at: "2023-12-16 23:13:28.644648000 +0000">]:Array):
+    16:         <% @lineup.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= @lineup[:number_one].ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= player.name %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= player.obp %> </td>
+    21:                 <td style="border: 1px solid black;"> <%= player.avg %> </td>
+    22:                 <td style="border: 1px solid black;"> <%= player.slg %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:19
+app/views/generate_lineup/generate_batter_lineup.html.erb:16:in `each'
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:23:07 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1152)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1244)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.5ms | Allocations: 7365)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `positions' for #<ActionView::Base:0x0000000006ac98>):
+    13: 
+    14:     <tbody>
+    15:         positions = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    16:         <% positions.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].name %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:23:26 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1205)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1297)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.3ms | Allocations: 7418)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13: 
+    14:     <tbody>
+    15:         @positions = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    16:         <% @positions.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].name %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:24:16 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1147)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1239)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.2ms | Allocations: 7360)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14: 
+    15:     
+    16:     <tbody>
+    17:         <% @positions.each do |player| %>
+    18:             <tr>
+    19:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].ops %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].name %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:17
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:24:40 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1299)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 3.4ms | Allocations: 7420)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `positions' for #<ActionView::Base:0x000000000771f0>):
+    14: 
+    15:     
+    16:     <tbody>
+    17:         <% positions.each do |player| %>
+    18:             <tr>
+    19:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].ops %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].name %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:17
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:27:27 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1144)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1236)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.1ms | Allocations: 7355)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13: 
+    14:     
+    15:     <tbody>
+    16:         <% @indexes.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].name %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:10:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:30:02 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1154)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1246)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.5ms | Allocations: 7381)
+
+
+  
+ActionView::Template::Error (undefined method `ops' for nil:NilClass):
+    15:     <tbody>
+    16:         <% @indexes.each do |player| %>
+    17:             <tr>
+    18:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].ops %> </td>
+    19:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].name %> </td>
+    20:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].obp %> </td>
+    21:                 <td style="border: 1px solid black;"> <%= @lineup["number_#{player}"].avg %> </td>
+  
+app/views/generate_lineup/generate_batter_lineup.html.erb:18
+app/views/generate_lineup/generate_batter_lineup.html.erb:16:in `each'
+app/views/generate_lineup/generate_batter_lineup.html.erb:16
+app/controllers/generate_lineup_controller.rb:11:in `generateBatterLineup'
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:30:36 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.3ms | Allocations: 364)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 14148)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 2.1ms | Allocations: 20304)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:30:56 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 243)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2422)
+Completed 200 OK in 22ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 2730)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:30:58 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3169)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5096)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 0.5ms | Allocations: 5988)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:32:53 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 258)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 14013)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 14929)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:32:55 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.4ms | Allocations: 414)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2605)
+Completed 200 OK in 19ms (Views: 12.0ms | ActiveRecord: 2.7ms | Allocations: 8121)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:33:09 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3178)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5105)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 5998)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:33:23 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 254)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 13867)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 14781)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:33:24 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.9ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2583)
+Completed 200 OK in 29ms (Views: 11.8ms | ActiveRecord: 3.5ms | Allocations: 11949)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:33:27 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3190)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5136)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 6029)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:33:39 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 2276)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2521)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:33:40 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.4ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2370)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 3246)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:33:59 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1754)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3681)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 4322)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:34:01 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2263)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:34:04 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.2ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2360)
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 3237)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:34:06 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1748)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3672)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 4313)
+
+

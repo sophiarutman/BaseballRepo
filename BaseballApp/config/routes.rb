@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get "baseball_app/redirect_to_delete_controller" => "baseball_app#redirectToDeleteController"
     get "delete_app" => "delete_app#index"
     get "generate_lineup" => "generate_lineup#index"
+    get 'generate_batter_lineup' => 'generate_lineup#generateBatterLineup'
     get "generate_lineup/generate_batter_lineup" => "generate_lineup#generateBatterLineup"
     post "/" => "baseball_app#enterPlayer"
     delete "delete_app"=>"delete_app#index"

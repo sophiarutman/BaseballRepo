@@ -1,60 +1,54 @@
 module GenerateLineupHelper
-# IIterates through remaining players and finds highest OBP
-    # Also checks if player has already been added to lineup
-    def highest_obp?(player, lineup)
-      PlayerModel.where("obp > ?", player.obp).where.not(id: lineup.map(&:player_model_id)).count == 0
-  end
-
-  # Iterates through remaining players and finds highest OBP + AVG
-  # Also checks if player has already been added to lineup
-  def highest_average_and_obp?(player, lineup)
-      combined_score = player.obp + player.avg
-      PlayerModel.where("obp + avg > ?", combined_score).where.not(id: lineup.map(&:player_model_id)).count == 0
-  end
-
-  # Iterates through remaining players and finds highest AVG
-  # Also checks if player has already been added to lineup
-  def highest_avg?(player, lineup)
-      PlayerModel.where("avg > ?", player.avg).where.not(id: lineup.map(&:player_model_id)).count == 0
-  end
-
-  # Iterates through remaining players and finds highest SLG
-  # Also checks if player has already been added to lineup
-  def highest_slg?(player, lineup)
-      PlayerModel.where("slg > ?", player.slg).where.not(id: lineup.map(&:player_model_id)).count == 0
-  end
-
-  # Uses calculated values to put together optimized lineup
-  def optimized_lineup(players)
+    def optimized_lineup(players)
+      # Sort players based on different criteria
+      sorted_by_avg_obp = players.sort_by { |p| [-(p.avg + p.obp), p.name] }
+      sorted_by_avg = players.sort_by { |p| [-p.avg, p.name] }
+      sorted_by_obp = players.sort_by { |p| [-p.obp, p.name] }
+      sorted_by_slg = players.sort_by { |p| [-p.slg, p.name] }
+      sorted_by_ops = players.sort_by { |p| [-p.ops, p.name] }
+  
       lineup = {}
-
-      # Get lineup 1-4 first in order 1, 3, 2, 4
-      lineup[:number_one] = PlayerModel.find { |player| highest_obp?(player, lineup) },
-      lineup[:number_three] = PlayerModel.find { |player| highest_avg?(player, lineup) },
-      lineup[:number_two] = PlayerModel.find { |player| highest_average_and_obp?(player, lineup) },
-      lineup[:number_four] = PlayerModel.find { |player| highest_slg?(player, lineup) },
-
-      # Create a new list that contains the unused players
-      remaining_players = players.reject { |player| lineup.values.include?(player) }
-
-      # Order players in descending order based on OBP
-      remaining_players.order(obp: :desc)
-
-      # Fill in rest of lineup
-      lineup[:number_five] = remaining_players.first
-      lineup[:number_six] = remaining_players.second
-      lineup[:number_seven] = remaining_players.third
-      lineup[:number_eight] = remaining_players.fourth
-      lineup[:number_nine] = remaining_players.fifth
-
+      
+      # Assign players to lineup positions based on criteria
+      # Batter 2: Highest combined AVG and OBP
+      lineup[:number_two] = sorted_by_avg_obp.shift
+      
+      # Batter 3: Highest AVG
+      # Ensure the player selected for Batter 2 is not considered again
+      sorted_by_avg.delete(lineup[:number_two])
+      lineup[:number_three] = sorted_by_avg.shift
+  
+      # Batter 1: Highest OBP
+      # Exclude previously selected players
+      sorted_by_obp.delete_if { |player| [lineup[:number_two], lineup[:number_three]].include?(player) }
+      lineup[:number_one] = sorted_by_obp.shift
+      
+      # Batter 4: Highest SLG
+      # Exclude previously selected players
+      sorted_by_slg.delete_if { |player| [lineup[:number_one], lineup[:number_two], lineup[:number_three]].include?(player) }
+      lineup[:number_four] = sorted_by_slg.shift
+  
+      # Batter 5: Highest OPS from remaining players
+      sorted_by_ops.delete_if { |player| lineup.values.include?(player) }
+      lineup[:number_five] = sorted_by_ops.shift
+  
+      # Batters 6-9: Best averages of remaining players, in decreasing order
+      sorted_by_avg.delete_if { |player| lineup.values.include?(player) }
+      lineup[:number_six] = sorted_by_avg.shift
+      lineup[:number_seven] = sorted_by_avg.shift
+      lineup[:number_eight] = sorted_by_avg.shift
+      lineup[:number_nine] = sorted_by_avg.shift
+  
       lineup
-  end
-
-  def print_lineup(lineup)
+    end
+  
+    def print_lineup(lineup)
       positions = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+      lineup_str = ""
       positions.each do |position|
-          next_player = lineup[:"number_#{position}"]
-          puts "#{position}. #{next_player.name}"
+        next_player = lineup[:"number_#{position}"]
+        lineup_str += "#{position}. #{next_player.name}\n" if next_player
       end
+        lineup_str
+    end
   end
-end

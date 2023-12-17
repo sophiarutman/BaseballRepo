@@ -1,6 +1,29 @@
-<% if @lineup %>
-  <h1>Optimized Lineup:</h1>
-  <% @lineup.each do |position, player| %>
-    <p> #{position.capitalize}: #{player.name} </p>
-  <% end %>
-<% end %>
+<table style="border-collapse: collapse; width: 100%;">
+    <thead>
+       <thead>
+        <tr>
+            <th style="border: 2px solid black;">Player</th>
+            <th style="border: 2px solid black;">OPS</th>
+            <th style="border: 2px solid black;">OBP</th>
+            <th style="border: 2px solid black;">BA</th>
+            <th style="border: 2px solid black;">SLG</th>
+        </tr>
+    </thead>
+    </thead>
+
+    
+    <tbody>
+        <% @indexes.each do |player| %>
+            <tr>
+                <td style="border: 1px solid black;"> <%= @lineup[:"number_#{player}"].name %> </td>
+                <td style="border: 1px solid black;"> <%= @lineup[:"number_#{player}"].ops %> </td>
+                <td style="border: 1px solid black;"> <%= @lineup[:"number_#{player}"].obp %> </td>
+                <td style="border: 1px solid black;"> <%= @lineup[:"number_#{player}"].avg %> </td>
+                <td style="border: 1px solid black;"> <%= @lineup[:"number_#{player}"].slg %> </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+
+<%= link_to "Go to homepage", baseball_app_url%>
