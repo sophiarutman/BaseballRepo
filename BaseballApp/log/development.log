@@ -2764,3 +2764,1237 @@ Processing by BaseballAppController#index as HTML
 Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 4313)
 
 
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:35:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 78.4ms | Allocations: 16411)
+  Rendered layout layouts/application.html.erb (Duration: 118.1ms | Allocations: 51219)
+Completed 200 OK in 319ms (Views: 146.0ms | ActiveRecord: 5.8ms | Allocations: 63021)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:35:52 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Dirk", "obpInput"=>"1.0", "avgInput"=>"1.0", "slgInput"=>"1.0", "opsInput"=>"2.0", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.2ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Dirk"], ["obp", 1.0], ["avg", 1.0], ["slg", 1.0], ["ops", 2.0], ["created_at", "2023-12-17 19:35:52.816724"], ["updated_at", "2023-12-17 19:35:52.816724"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms | Allocations: 3540)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:35:52 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1772)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3696)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 4384)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:35:55 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 237)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2426)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 2887)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:35:56 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2620)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 3604)
+
+
+Started GET "/" for ::1 at 2023-12-17 14:37:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 16434)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 51238)
+Completed 200 OK in 92ms (Views: 49.7ms | ActiveRecord: 4.1ms | Allocations: 63040)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:37:34 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 221)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:37:34 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 714)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2642)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 3107)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:37:42 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Dirk", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.3ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Dirk"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (1.5ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 104]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 27ms (ActiveRecord: 2.6ms | Allocations: 4218)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:37:42 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1749)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3674)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 4363)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:37:46 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:37:46 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 478)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2398)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 2649)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:37:50 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Zac", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Zac"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.8ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 91]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms | Allocations: 1989)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:37:51 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1734)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3659)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 4303)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:37:57 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2454)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 2912)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:37:59 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3691)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 4341)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:38:00 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:38:00 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 472)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2392)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 2641)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:03 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Chris", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Chris"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.6ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 100]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms | Allocations: 1981)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:38:03 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1679)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3603)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 4246)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:38:09 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:38:09 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 493)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2413)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 2662)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:14 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Rut", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Rut"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.6ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 92]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms | Allocations: 2004)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:38:14 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1662)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3606)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 4252)
+
+
+Started GET "/sort_by_name" for ::1 at 2023-12-17 14:38:16 -0500
+Processing by SortByNameController#sort as HTML
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/controllers/sort_by_name_controller.rb:3:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering sort_by_name/sort.html.erb within layouts/application
+  Rendered sort_by_name/sort.html.erb within layouts/application (Duration: 1.0ms | Allocations: 367)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2574)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 3523)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:38:19 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1644)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3568)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4208)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:38:27 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:38:27 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 460)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2381)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 2630)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:30 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Man", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Man"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.7ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 93]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms | Allocations: 1980)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:38:30 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1645)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3569)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 4212)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:38:33 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:38:33 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2389)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2638)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:36 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Woman", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Woman"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (1.1ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 94]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms | Allocations: 1983)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:38:36 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1628)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3552)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 4195)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:38:39 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:38:39 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 475)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2395)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 2644)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:38:45 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1616)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3540)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 4180)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:38:47 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:38:47 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 442)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2362)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 2611)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:52 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Ryan", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Ryan"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 95]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms | Allocations: 1995)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:38:52 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3523)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 4166)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:38:53 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:38:53 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2408)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 2659)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:57 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Corrine", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Corrine"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2122)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 3016)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:59 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Corrine", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.3ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Corrine"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2115)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 3038)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:59 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Corrine", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.4ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Corrine"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2115)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 3035)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:38:59 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Corrine", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Corrine"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 2116)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 3045)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:39:02 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1590)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3514)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 4155)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:39:06 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:39:06 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 466)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2386)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 2635)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:39:08 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"", "commit"=>"Delete Player by Name"}
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2115)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 2670)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:39:11 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Corinne", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Corinne"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.6ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 96]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms | Allocations: 1980)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:39:11 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1593)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3517)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 4160)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:39:13 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:39:13 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 460)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2380)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 2629)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:39:16 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Eve", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Eve"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.5ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 97]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms | Allocations: 2007)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:39:16 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1549)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3473)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 4116)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:39:18 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:39:18 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2410)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2659)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:39:21 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"FH", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "FH"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.9ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 98]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms | Allocations: 2001)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:39:21 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3487)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 4133)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:39:22 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:39:22 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 457)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2377)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2626)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:39:26 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Sophia", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Sophia"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.7ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 99]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms | Allocations: 1998)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:39:26 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3469)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4112)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:40:07 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2832)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 16295)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 4.6ms | Allocations: 19107)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:43:15 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2832)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 16315)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 2.1ms | Allocations: 19113)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:44:34 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Leadoff", "obpInput"=>".524", "avgInput"=>".200", "slgInput"=>".2", "opsInput"=>".724", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (0.7ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Leadoff"], ["obp", 0.524], ["avg", 0.2], ["slg", 0.2], ["ops", 0.724], ["created_at", "2023-12-17 19:44:34.139428"], ["updated_at", "2023-12-17 19:44:34.139428"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms | Allocations: 6343)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:44:34 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1536)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3460)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4146)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:45:41 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Second", "obpInput"=>".522", "avgInput"=>".250", "slgInput"=>".2", "opsInput"=>".722", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.0ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Second"], ["obp", 0.522], ["avg", 0.25], ["slg", 0.2], ["ops", 0.722], ["created_at", "2023-12-17 19:45:41.588584"], ["updated_at", "2023-12-17 19:45:41.588584"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms | Allocations: 2009)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:45:41 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1555)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3479)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4122)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:46:56 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 142)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:46:56 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 676)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2598)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3058)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:47:00 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Leadoff", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Leadoff"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.7ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 105]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 2188)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:47:00 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3474)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 4117)
+
+
+Started GET "/baseball_app/redirect_to_delete_controller" for ::1 at 2023-12-17 14:47:05 -0500
+Processing by BaseballAppController#redirectToDeleteController as HTML
+Redirected to http://localhost:3000/delete_app
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started GET "/delete_app" for ::1 at 2023-12-17 14:47:05 -0500
+Processing by DeleteAppController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering delete_app/index.html.erb within layouts/application
+  Rendered delete_app/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 457)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2389)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 2639)
+
+
+Started DELETE "/delete_app" for ::1 at 2023-12-17 14:47:09 -0500
+Processing by DeleteAppController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deleteInput"=>"Second", "commit"=>"Delete Player by Name"}
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models" WHERE "player_models"."name" = ? LIMIT ?[0m  [["name", "Second"], ["LIMIT", 1]]
+  ↳ app/controllers/delete_app_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mPlayerModel Destroy (0.8ms)[0m  [1m[31mDELETE FROM "player_models" WHERE "player_models"."id" = ?[0m  [["id", 106]]
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/delete_app_controller.rb:8:in `index'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms | Allocations: 1992)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:47:09 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1508)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3442)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 4086)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:48:31 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Second", "obpInput"=>".500", "avgInput"=>".500", "slgInput"=>".5", "opsInput"=>".5", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (0.7ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Second"], ["obp", 0.5], ["avg", 0.5], ["slg", 0.5], ["ops", 0.5], ["created_at", "2023-12-17 19:48:31.081373"], ["updated_at", "2023-12-17 19:48:31.081373"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 2023)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:48:31 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1538)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3463)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4106)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:48:58 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Third", "obpInput"=>".500", "avgInput"=>".499", "slgInput"=>".5", "opsInput"=>".5", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (0.8ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Third"], ["obp", 0.5], ["avg", 0.499], ["slg", 0.5], ["ops", 0.5], ["created_at", "2023-12-17 19:48:58.875917"], ["updated_at", "2023-12-17 19:48:58.875917"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 2027)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:48:58 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1570)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3494)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4137)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:49:47 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Leadoff", "obpInput"=>".49", "avgInput"=>".49", "slgInput"=>".5", "opsInput"=>".5", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.0ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Leadoff"], ["obp", 0.49], ["avg", 0.49], ["slg", 0.5], ["ops", 0.5], ["created_at", "2023-12-17 19:49:47.198386"], ["updated_at", "2023-12-17 19:49:47.198386"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms | Allocations: 1994)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:49:47 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3523)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4166)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:50:09 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Fourth", "obpInput"=>".1", "avgInput"=>".1", "slgInput"=>".45", "opsInput"=>".3", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.0ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Fourth"], ["obp", 0.1], ["avg", 0.1], ["slg", 0.45], ["ops", 0.3], ["created_at", "2023-12-17 19:50:09.961676"], ["updated_at", "2023-12-17 19:50:09.961676"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms | Allocations: 2029)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:50:09 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1596)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3521)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 4165)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:51:05 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Fifth", "obpInput"=>".1", "avgInput"=>".30", "slgInput"=>".44", "opsInput"=>".6", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.3ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Fifth"], ["obp", 0.1], ["avg", 0.3], ["slg", 0.44], ["ops", 0.6], ["created_at", "2023-12-17 19:51:05.652562"], ["updated_at", "2023-12-17 19:51:05.652562"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms | Allocations: 2030)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:51:05 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1628)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3552)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4195)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:51:31 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Sixth", "obpInput"=>".1", "avgInput"=>".33", "slgInput"=>".1", "opsInput"=>".1", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.5ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Sixth"], ["obp", 0.1], ["avg", 0.33], ["slg", 0.1], ["ops", 0.1], ["created_at", "2023-12-17 19:51:31.190332"], ["updated_at", "2023-12-17 19:51:31.190332"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms | Allocations: 2011)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:51:31 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1630)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3554)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 4197)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:51:51 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Seventh", "obpInput"=>".1", "avgInput"=>".3", "slgInput"=>".1", "opsInput"=>".1", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.1ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Seventh"], ["obp", 0.1], ["avg", 0.3], ["slg", 0.1], ["ops", 0.1], ["created_at", "2023-12-17 19:51:51.032826"], ["updated_at", "2023-12-17 19:51:51.032826"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms | Allocations: 2008)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:51:51 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3602)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.1ms | Allocations: 4248)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:52:06 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Eighth", "obpInput"=>".1", "avgInput"=>".25", "slgInput"=>".1", "opsInput"=>".1", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (0.9ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Eighth"], ["obp", 0.1], ["avg", 0.25], ["slg", 0.1], ["ops", 0.1], ["created_at", "2023-12-17 19:52:06.713334"], ["updated_at", "2023-12-17 19:52:06.713334"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 2021)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:52:06 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1676)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3613)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 4258)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:52:17 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Ninth", "obpInput"=>".1", "avgInput"=>".2", "slgInput"=>".1", "opsInput"=>".1", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.0ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ninth"], ["obp", 0.1], ["avg", 0.2], ["slg", 0.1], ["ops", 0.1], ["created_at", "2023-12-17 19:52:18.004229"], ["updated_at", "2023-12-17 19:52:18.004229"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms | Allocations: 2017)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:52:18 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1731)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3655)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 4298)
+
+
+Started POST "/" for ::1 at 2023-12-17 14:52:47 -0500
+Processing by BaseballAppController#enterPlayer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nameInput"=>"Cut from Lineup", "obpInput"=>".1", "avgInput"=>".19", "slgInput"=>".1", "opsInput"=>".1", "commit"=>"Enter Player Information"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mPlayerModel Create (1.1ms)[0m  [1m[32mINSERT INTO "player_models" ("name", "obp", "avg", "slg", "ops", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Cut from Lineup"], ["obp", 0.1], ["avg", 0.19], ["slg", 0.1], ["ops", 0.1], ["created_at", "2023-12-17 19:52:47.246517"], ["updated_at", "2023-12-17 19:52:47.246517"]]
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/baseball_app_controller.rb:20:in `block in enterPlayer'
+Redirected to http://localhost:3000/baseball_app
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms | Allocations: 2029)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:52:47 -0500
+Processing by BaseballAppController#index as TURBO_STREAM
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.0ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1754)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3678)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 4322)
+
+
+Started GET "/generate_lineup" for ::1 at 2023-12-17 14:52:49 -0500
+Processing by GenerateLineupController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/index.html.erb within layouts/application
+  Rendered generate_lineup/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2426)
+Completed 200 OK in 21ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 2882)
+
+
+Started GET "/generate_batter_lineup" for ::1 at 2023-12-17 14:52:50 -0500
+Processing by GenerateLineupController#generateBatterLineup as HTML
+  [1m[36mPlayerModel Load (0.2ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/helpers/generate_lineup_helper.rb:4:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering generate_lineup/generate_batter_lineup.html.erb within layouts/application
+  Rendered generate_lineup/generate_batter_lineup.html.erb within layouts/application (Duration: 1.7ms | Allocations: 416)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2602)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.2ms | Allocations: 3544)
+
+
+Started GET "/baseball_app" for ::1 at 2023-12-17 14:54:00 -0500
+Processing by BaseballAppController#index as HTML
+  [1m[36mPlayerModel Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/controllers/baseball_app_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering baseball_app/index.html.erb within layouts/application
+  [1m[36mCACHE PlayerModel Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:14
+  [1m[36mPlayerModel Load (0.1ms)[0m  [1m[34mSELECT "player_models".* FROM "player_models"[0m
+  ↳ app/views/baseball_app/index.html.erb:40
+  Rendered baseball_app/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3684)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 4327)
+
+
