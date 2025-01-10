@@ -19,3 +19,5 @@ This is how we decide, in the order that we decide. We will chose the second bat
 6-9th: best averages of remaining players, in decreasing order. 6th will have the highest average of all remaining players, 7th will have the second highest, etc.
 
 Now, generate your lineup!
+
+*Note*: There are some players pre-loaded into the sight with some fairly absurd statistics. These are just examples for you to get a feel of the site.
